@@ -1,0 +1,28 @@
+<!-- <div
+  fxFlex="0 1 auto"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+  style="margin-bottom: 6px"
+>
+  <div align="center">{{ imageId + "/" + photos.length }}</div>
+  <mat-icon (click)="close()" style="cursor: pointer"> close </mat-icon>
+</div> -->
+
+<div fxLayout="row" align="center" style="margin-bottom: 16px">
+  <div fxFlex="0 1 100%" style="font-size: large">
+    {{ imageId+1 + "/" + photos.length }}
+  </div>
+  <div fxFlex="2%">
+    <mat-icon (click)="close()" style="cursor: pointer"> close </mat-icon>
+  </div>
+</div>
+
+<div fxFlex="1 1 auto" fxLayout="row" style="padding-bottom: 4vh">
+  <div class="arrow" (click)="changeImg('decrease')"><</div>
+
+  <div fxFlex="1 1 90%" fxLayoutAlign="center center">
+    <img [src]="photos[imageId].url" style="width: 90%; height: 100%" />
+  </div>
+
+  <div class="arrow" id="increase" (click)="changeImg('increase')">></div>
+</div>

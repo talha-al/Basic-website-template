@@ -1,0 +1,23 @@
+:host {
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.arrow {
+  font-size: 30px;
+  flex: 0 1 100%;
+  box-sizing: border-box;
+  place-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  max-width: 5%;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  // background-color: rgb(194, 194, 194);
+  color: rgb(194, 194, 194);
+}

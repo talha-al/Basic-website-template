@@ -1,0 +1,140 @@
+<div fxLayout="column" fxFlex="1 1 auto">
+  <div
+    class="ustMenu"
+    id="ustMenu"
+    fxFlex="1 1 auto"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+  >
+    <div fxLayoutAlign="center center" style="margin: 24px">
+      <div>
+        <img style="height: 7vh; width: 7vh" [src]="logo" />
+      </div>
+    </div>
+    <!-- <div #el fxFlex="1 1 auto" fxLayoutAlign="end center" style="margin: 24px">
+      <button
+        mat-button
+        [ngClass]="selectedButton === 'whoWeAre' ? 'selectBtn' : ''"
+        fxFlex="1 1 auto"
+        color="primary"
+        style="margin: 10px"
+       (click)="scrollTo('whoWeAre')"
+
+      >
+        Who We Are?
+      </button>
+      <button
+        mat-button
+        [ngClass]="selectedButton === 'products' ? 'selectBtn' : ''"
+        fxFlex="1 1 auto"
+        color="primary"
+        style="margin: 10px"
+        (click)="scrollTo('products')"
+      >
+        Products
+      </button>
+      <button
+        mat-button
+        [ngClass]="selectedButton === 'photos' ? 'selectBtn' : ''"
+        fxFlex="1 1 auto"
+        color="primary"
+        style="margin: 10px"
+        (click)="scrollTo('photos')"
+      >
+        Photos
+      </button>
+      <button
+        mat-button
+        [ngClass]="selectedButton === 'contact' ? 'selectBtn' : ''"
+        fxFlex="1 1 auto"
+        color="primary"
+        style="margin: 10px"
+        (click)="scrollTo('contact')"
+      >
+        Contact
+      </button>
+    </div> -->
+    <div #el fxFlex="1 1 auto" fxLayoutAlign="end center" style="margin: 24px">
+      <div *ngFor="let cat of categories">
+        <div
+          class="category"
+          [ngClass]="selectedButton === cat.id ? 'selectBtn' : ''"
+          fxFlex="1 1 auto"
+          color="primary"
+          (click)="scrollTo(cat.id)"
+        >
+          {{ cat.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="whoWeAre"
+    id="whoWeAre"
+    fxFlex="1 1 auto"
+    fxLayoutAlign="center center"
+    fxLayout="column"
+  >
+    <h2 style="letter-spacing: 4px">BİZ KİMİZ?</h2>
+    <div>Tanıtım Yazısı Buraya Eklenecek</div>
+  </div>
+
+  <div
+    id="products"
+    class="products"
+    fxFlex="1 1 auto"
+    fxLayoutAlign="center center"
+    fxLayout="column"
+  >
+    <h2 style="letter-spacing: 4px; padding: 20px">Our Product</h2>
+    <div fxLayout="row wrap" fxFlex="1 1 auto">
+      <div *ngFor="let prod of products; index as i">
+        <mat-card class="prod-card" fxLayout="column" style="margin: 0 4px">
+          <mat-card-header>
+            <mat-card-title>{{ prod.name }} </mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="prod.photo" fxFlex="1 1 auto" />
+          <mat-card-content>
+            <p>
+              {{ prod.description }}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button
+              fxFlex="1 1 auto"
+              (click)="openProductsDialog(prod)"
+              mat-button
+            >
+              VIEW
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="photos"
+    class="photos"
+    fxFlex="1 1 auto"
+    fxLayoutAlign="center center"
+    fxLayout="column"
+  >
+    <h2 style="letter-spacing: 4px">PHOTOS</h2>
+    <div>Share photos describing your project, products and company!</div>
+    <div fxFlex="1 1 auto" fxLayout="row wrap" fxLayoutAlign="center center">
+      <img
+        *ngFor="let photo of photos; index as idx"
+        fxFlex="1 1 40%"
+        [src]="photo.url"
+        (click)="openPhotoGallery(idx)"
+        style="height: 40vh; width: 40vh; margin: 8px; cursor: zoom-in"
+      />
+    </div>
+  </div>
+
+  <div id="contact" class="contact" fxFlex="1 1 auto">
+    <div>dhfghgfjdj</div>
+  </div>
+</div>
