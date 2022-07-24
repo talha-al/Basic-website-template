@@ -23,6 +23,7 @@ import { ProductsComponent } from './main-page/products/products.component';
 import { PhotosSectionComponent } from './main-page/photos-section/photos-section.component';
 import { ContactComponent } from './main-page/contact/contact.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     FlexLayoutModule,
     MatDialogModule,
     MatIconModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
