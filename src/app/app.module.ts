@@ -17,6 +17,12 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ProductsDialogComponent } from './products-dialog/products-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { AboutUsComponent } from './main-page/about-us/about-us.component';
+import { ProductsComponent } from './main-page/products/products.component';
+import { PhotosSectionComponent } from './main-page/photos-section/photos-section.component';
+import { ContactComponent } from './main-page/contact/contact.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -24,6 +30,10 @@ import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
     MainPageComponent,
     ProductsDialogComponent,
     PhotoGalleryComponent,
+    AboutUsComponent,
+    ProductsComponent,
+    PhotosSectionComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,12 +45,14 @@ import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
     MatCheckboxModule,
     MatFormFieldModule,
     MatInputModule,
+    MatMenuModule,
     MatToolbarModule,
     FlexLayoutModule,
     MatDialogModule,
     MatIconModule,
+    CarouselModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

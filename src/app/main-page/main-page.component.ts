@@ -1,6 +1,6 @@
 import { PhotoGalleryComponent } from './../photo-gallery/photo-gallery.component';
 import { ProductsDialogComponent } from './../products-dialog/products-dialog.component';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -11,6 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class MainPageComponent implements OnInit {
   @ViewChild('el') span: ElementRef;
 
+  menuCtrl: boolean = false;
   logo: string = './assets/logo.png';
   selectedButton: string = 'whoWeAre';
   categories = [
@@ -38,6 +39,12 @@ export class MainPageComponent implements OnInit {
       description: 'Hospital ICU Clinical Information System',
       photo: './assets/product3.jpg',
     },
+    {
+      id: 5,
+      name: 'LUTEAAA',
+      description: 'Hospital ICU Clinical Information System',
+      photo: './assets/product3.jpg',
+    },
   ];
 
   photos = [
@@ -46,10 +53,36 @@ export class MainPageComponent implements OnInit {
     { url: './assets/product3.jpg' },
     { url: './assets/product1.jpg' },
   ];
- 
-  constructor(public dialog: MatDialog) {}
 
-  ngOnInit(): void {}
+  constructor(public dialog: MatDialog) { this.onWindowResize(); }
+
+  @HostListener('window:resize')
+  onWindowResize() {
+    if (window.screen.width < 600) {
+      console.log("600!den küçük!!!");
+      this.menuCtrl = true;
+
+    } else {
+      console.log("600!den Büyük!!!");
+      this.menuCtrl = false;
+    }
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    var element = document.getElementById("ustMenu");
+
+    if (window.scrollY > screen.height / 10) {
+      element.classList.add("sticky");
+    }else{
+      element.classList.remove("sticky");
+    }
+  }
+
+  ngOnInit(): void {
+
+
+  }
 
   openProductsDialog(prod: Products) {
     const dialogRef = this.dialog.open(ProductsDialogComponent, {
@@ -70,9 +103,6 @@ export class MainPageComponent implements OnInit {
   }
 
   scrollTo(idText: string) {
-    console.log(this.span.nativeElement.scrollHeight);
-    console.log();
-
     this.selectedButton = idText;
     const element = document.querySelector('#' + idText);
     const ust = document.querySelector('#ustMenu');

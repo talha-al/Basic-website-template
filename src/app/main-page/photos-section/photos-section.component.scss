@@ -1,0 +1,11 @@
+.photos {
+  height: 110vh;
+  background: cadetblue;
+  background: linear-gradient(
+    90deg,
+    rgb(125, 155, 180) 0%,
+    rgb(191, 215, 241) 100%
+  );
+  background-size: cover;
+  color: #fff;
+}

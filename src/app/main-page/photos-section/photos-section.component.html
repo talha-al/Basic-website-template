@@ -1,0 +1,8 @@
+<div class="photos" fxFlex="1 1 auto" fxLayoutAlign="center center" fxLayout="column">
+  <h2 style="letter-spacing: 4px">PHOTOS</h2>
+  <div>Share photos describing your project, products and company!</div>
+  <div fxFlex="1 1 auto" fxLayout="row wrap" fxLayoutAlign="center center">
+    <img *ngFor="let photo of photos; index as idx" fxFlex="1 1 40%" [src]="photo.url" (click)="openPhotoGallery(idx)"
+      style="height: 40vh; width: 40vh; margin: 8px; cursor: zoom-in" />
+  </div>
+</div>
