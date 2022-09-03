@@ -1,11 +1,22 @@
 .photos {
-  height: 110vh;
-  background: cadetblue;
-  background: linear-gradient(
-    90deg,
-    rgb(125, 155, 180) 0%,
-    rgb(191, 215, 241) 100%
-  );
+  height: 90vh;
+  background: rgb(227, 229, 230);
+  // background: linear-gradient(
+  //   90deg,
+  //   rgb(125, 155, 180) 0%,
+  //   rgb(191, 215, 241) 100%
+  // );
   background-size: cover;
   color: #fff;
+}
+
+.header {
+  letter-spacing: 4px;
+  margin: 4vw 0 2vw 0;
+  text-shadow: -3px 2px 10px #6c6c6c;
+  color: #44413e;
+}
+
+ngb-carousel {
+  max-width: min-content;
 }

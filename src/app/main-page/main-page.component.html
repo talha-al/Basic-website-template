@@ -1,11 +1,6 @@
 <div class="ustMenu" id="ustMenu" fxFlex="1 1 auto" fxLayout="row" fxLayoutAlign="space-between center">
-  <div fxLayoutAlign="center center" style="margin: 24px">
-    <div>
-      <img style="height: 7vh; width: 7vh" [src]="logo" />
-    </div>
-  </div>
-  <div #el *ngIf="!menuCtrl" class="buttons" fxFlex="1 1 auto" fxLayoutAlign="end center" style="margin: 24px">
-    <div *ngFor="let cat of categories">
+  <div *ngIf="!menuCtrl" class="buttons" fxFlex="1 1 auto" fxLayoutAlign="end center" style="margin: 24px" fxLayoutGap="1vw">
+    <div *ngFor="let cat of categories" >
       <div class="categoryButtons" [ngClass]="selectedButton === cat.id ? 'selectBtn' : ''" fxFlex="1 1 auto"
         (click)="scrollTo(cat.id)">
         {{ cat.name }}

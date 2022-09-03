@@ -1,7 +1,30 @@
 .contact {
-  height: 90vh;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(44, 8, 8, 0) 0%, rgb(155, 119, 119) 100%);
+  height: 60vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(44, 8, 8, 0) 0%, rgb(177, 157, 157) 100%);
   background-size: cover;
-  color: #fff;
+  color: black;
+  // color: #fff;
+
+  h1{
+    margin-bottom: 2vw;
+    font: normal normal normal 35px/1.4em baskervillemtw01-smbdit,baskervillemtw05-smbdit,serif;;
+  }
+}
+
+.info{
+  margin-right: 8vw;
+  font: normal normal normal 15px/1.4em futura-lt-w01-book,futura-lt-w05-book,sans-serif;
+}
+
+.form-fields{
+  mat-form-field{
+    color: black;
+  }
+}
+.example-full-width{
+  color: black;
+  mat-label{
+    color:rgb(20, 14, 2)
+  }
 }

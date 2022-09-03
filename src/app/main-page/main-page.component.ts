@@ -1,6 +1,6 @@
 import { PhotoGalleryComponent } from './../photo-gallery/photo-gallery.component';
 import { ProductsDialogComponent } from './../products-dialog/products-dialog.component';
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -9,7 +9,6 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./main-page.component.scss'],
 })
 export class MainPageComponent implements OnInit {
-  @ViewChild('el') span: ElementRef;
 
   menuCtrl: boolean = false;
   logo: string = './assets/logo.png';

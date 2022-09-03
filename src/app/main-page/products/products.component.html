@@ -1,24 +1,6 @@
 <div class="page" fxFlex="1 1 auto" fxLayoutAlign="start center" fxLayout="column">
   <h2 style="letter-spacing: 4px; padding: 20px">Our Product</h2>
 
-  <div class="wrapper">
-    <owl-carousel-o [options]="customOptions">
-      <ng-container *ngFor="let slide of apiData">
-        <ng-template class="slide" carouselSlide [id]="slide.id">
-          <img [src]="slide.url" [alt]="slide.id" [title]="slide.id">
-        </ng-template>
-      </ng-container>
-
-    </owl-carousel-o>
-  </div>
-
-
-  <!-- <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide src="https://via.placeholder.com/1920x800" >Slide 1</ng-template>
-    <ng-template carouselSlide>Slide 2</ng-template>
-    <ng-template carouselSlide>Slide 3</ng-template>
-  </owl-carousel-o> -->
-
   <!-- <div fxLayout="row" fxLayoutAlign="center center">
     <mat-icon class="arrow-icon" (click)="slideHandle('left')">chevron_left</mat-icon>
     <div fxLayout="row wrap" class="container" id="tst" fxFlex="1 1 auto">
@@ -44,4 +26,3 @@
     <mat-icon class="arrow-icon" (click)="slideHandle('right')">chevron_right</mat-icon>
   </div> -->
 </div>
-
