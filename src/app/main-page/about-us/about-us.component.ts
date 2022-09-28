@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about-us',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
+
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
+    let element = document.getElementById("container");
+    if (window.scrollY > screen.height / 3.5) {
+      element.classList.add("moveAnim");
+    }
+  }
 
   ngOnInit(): void {
   }

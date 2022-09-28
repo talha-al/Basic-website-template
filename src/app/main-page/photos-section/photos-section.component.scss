@@ -1,22 +1,59 @@
 .photos {
-  height: 90vh;
   background: rgb(227, 229, 230);
-  // background: linear-gradient(
-  //   90deg,
-  //   rgb(125, 155, 180) 0%,
-  //   rgb(191, 215, 241) 100%
-  // );
-  background-size: cover;
-  color: #fff;
-}
-
-.header {
-  letter-spacing: 4px;
-  margin: 4vw 0 2vw 0;
-  text-shadow: -3px 2px 10px #6c6c6c;
-  color: #44413e;
+  padding: 2vh 8vh 8vh 8vh;
 }
 
 ngb-carousel {
   max-width: min-content;
+}
+
+.container {
+  margin: 8px;
+  min-width: 100%;
+  justify-content: space-around;
+  place-content: start;
+}
+
+.photo-cell {
+  display: flex;
+  flex: 0 0 calc((100%/3) - 12px);
+  margin: 4px;
+  cursor: pointer;
+  img {
+    width: 100%;
+  }
+}
+.photo-cell:hover {
+  overflow: hidden;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+    opacity: 0.8;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .photo-cell {
+    display: flex;
+    flex: 1 1 100%;
+    margin: 4px;
+    img {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 801px) {
+  .photo-cell {
+    display: flex;
+    flex: 1 1 48%;
+    margin: 4px;
+    img {
+      width: 100%;
+    }
+  }
 }

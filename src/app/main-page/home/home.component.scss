@@ -1,0 +1,44 @@
+.aboutUs {
+  height: 120vh;
+  // background: url('/assets/bg1.jpg');
+  background-color: #1e7a7a;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  .text {
+    color: #fff;
+    h1 {
+      font-size: 60px;
+      letter-spacing: 0.25em;
+      font-weight: bold;
+      text-align: center;
+      max-width: fit-content;
+      border-right: 2px solid rgba(255,255,255,.75);
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);
+      animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+    }
+    span {
+      margin-top: 6px;
+      font-size: 24px;
+    }
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}

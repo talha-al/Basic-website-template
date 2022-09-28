@@ -45,5 +45,4 @@ export class PhotosSectionComponent implements OnInit {
   openPhotoGallery(index: number) {
     this.openPhotos.emit(index)
   }
-
 }

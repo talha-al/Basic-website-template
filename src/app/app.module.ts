@@ -14,28 +14,31 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainPageComponent } from './main-page/main-page.component';
-import { ProductsDialogComponent } from './products-dialog/products-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { AboutUsComponent } from './main-page/about-us/about-us.component';
-import { ProductsComponent } from './main-page/products/products.component';
 import { PhotosSectionComponent } from './main-page/photos-section/photos-section.component';
 import { ContactComponent } from './main-page/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { CommunicationStickyComponent } from './main-page/communication-sticky/communication-sticky.component';
+import { FooterComponent } from './main-page/footer/footer.component';
+import { HomeComponent } from './main-page/home/home.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    ProductsDialogComponent,
     PhotoGalleryComponent,
     AboutUsComponent,
-    ProductsComponent,
     PhotosSectionComponent,
     ContactComponent,
+    CommunicationStickyComponent,
+    FooterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,9 +57,10 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     HttpClientModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

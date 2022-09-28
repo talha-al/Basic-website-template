@@ -1,25 +1,95 @@
-<div fxLayout="row" class="whoWeAre">
-  <div class="description" fxFlex="1 1 60%" fxLayoutAlign="center center" fxLayout="column">
-    <h1>BEN KİMİM?</h1>
-    <div class="description__text">
-      About Me
-      I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me
-      to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your
-      page.
-      I’m a great place for you to tell a story and let your users know a little more about you.
-
-      <br> <div style="margin-top: 20px"></div>
-      This is a great space to write a long text about your company and your services. You can use this space to go into
-      a
-      little more detail about your company. Talk about your team and what services you provide. Tell your visitors the
-      story of how you came up with the idea for your business and what makes you different from your competitors. Make
-      your company stand out and show your visitors who you are.
-    </div>
+<div class="container" id="container">
+  <div class="section-1">
+    <div class="header">ABOUT ME</div>
+    <div class="section-1__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed risus massa. Nam aliquet dui ipsum, non
+      sodales
+      elit molestie nec. Vestibulum ultrices dolor et erat consequat bibendum. Donec a diam non felis egestas rhoncus.
+      Nullam tincidunt nibh massa, ac imperdiet tellus aliquam et. Nulla ut eros tortor. Nunc blandit scelerisque ipsum,
+      vitae suscipit risus sagittis at. Morbi eu ante egestas, mattis turpis gravida, lobortis urna. Suspendisse
+      facilisis
+      rutrum imperdiet. Morbi hendrerit turpis non cursus rutrum. Integer ac euismod arcu, sit amet porttitor risus.
+      Duis
+      nulla orci, congue sit amet fermentum id, maximus nec metus. Etiam blandit justo quis turpis pretium sollicitudin.
+      Phasellus iaculis tortor lectus, sed varius lacus pellentesque facilisis.</div>
   </div>
-  <div fxFlex="40%" fxLayoutAlign="start center">
-    <img
-    style="height: 100%; width: 100%;"
-      src="https://images.unsplash.com/photo-1442328166075-47fe7153c128?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwbG9va2luZyUyMGF0JTIwaG9yaXpvbnxlbnwwfHwwfHw%3D&w=1000&q=80">
-      <!-- src="https://media.istockphoto.com/photos/smiling-mixed-race-mature-man-on-grey-background-picture-id1319763895?k=20&m=1319763895&s=170667a&w=0&h=I2abU-vZKLyntC4dI5nyTf9iiTW9J2azkWF2-t83E-I="> -->
+
+  <div fxLayout="row wrap">
+    <div class="info-section">
+      <div class="title">EDUCATION</div>
+      <div class="__section">
+        <div class="date">2012-2015</div>
+        <div class="__description">Riverview University – Boston, MA</div>
+      </div>
+      <div class="__section">
+        <div class="date">2012-2015</div>
+        <div class="__description">Riverview University – Boston, MA.</div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <div class="title">EXPERIENCE</div>
+      <div class="__section">
+        <div class="date">2020-Present</div>
+        <div class="__description"><span class="f-w-bold"> Front-end Developer</span> - Riverview University
+        </div>
+      </div>
+      <div class="__section">
+        <div class="date">2016-2020</div>
+        <div class="__description"><span class="f-w-bold"> Front-end Developer</span> - Riverview University
+        </div>
+      </div>
+      <div class="__section">
+        <div class="date">2012-2016</div>
+        <div class="__description"><span class="f-w-bold"> Front-end Developer</span> - Riverview University
+        </div>
+      </div>
+    </div>
+
+
+    <div class="skill-section">
+      <div class="title">SKILLS</div>
+      <div class="skills-cell">
+        <div class="skills_text">Programming</div>
+        <ngb-progressbar type="success" [value]="90" [striped]="true"></ngb-progressbar>
+      </div>
+
+      <div class="skills-cell">
+        <div class="skills_text">Angular</div>
+        <ngb-progressbar fxFlex="60%" type="success" [value]="100" [striped]="true"></ngb-progressbar>
+      </div>
+
+      <div class="skills-cell">
+        <div class="skills_text">TypeScript</div>
+        <ngb-progressbar type="success" [value]="90" [striped]="true"></ngb-progressbar>
+      </div>
+
+      <div class="skills-cell">
+        <div class="skills_text">HTML & CSS</div>
+        <ngb-progressbar type="success" [value]="85" [striped]="true"></ngb-progressbar>
+      </div>
+
+      <div class="skills-cell">
+        <div class="skills_text">Data Analysis </div>
+        <ngb-progressbar type="success" [value]="15" [striped]="true"></ngb-progressbar>
+      </div>
+      <div class="title m-t-4">LANGUAGES</div>
+      <div class="skills-cell">
+        <div class="skills_text">English </div>
+        <ngb-progressbar type="success" [value]="75" [striped]="true"></ngb-progressbar>
+      </div>
+      <div class="skills-cell">
+        <div class="skills_text">Turkish </div>
+        <ngb-progressbar type="success" [value]="100" [striped]="true"></ngb-progressbar>
+      </div>
+
+    </div>
+
+    <div class="info-section">
+      <div class="title">INTEREST</div>
+      <li>Swimming</li>
+      <li>Riding</li>
+      <li>Reading a book</li>
+    </div>
   </div>
 </div>

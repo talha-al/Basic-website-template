@@ -1,23 +1,25 @@
-<div class="ustMenu" id="ustMenu" fxFlex="1 1 auto" fxLayout="row" fxLayoutAlign="space-between center">
-  <div *ngIf="!menuCtrl" class="buttons" fxFlex="1 1 auto" fxLayoutAlign="end center" style="margin: 24px" fxLayoutGap="1vw">
-    <div *ngFor="let cat of categories" >
-      <div class="categoryButtons" [ngClass]="selectedButton === cat.id ? 'selectBtn' : ''" fxFlex="1 1 auto"
-        (click)="scrollTo(cat.id)">
-        {{ cat.name }}
+<div class="menu" id="menu" fxFlex="1 1 auto" fxLayout="row" fxLayoutAlign="space-between center">
+  <div *ngIf="!isSmallScreen" fxFlex="1 1 auto" fxLayoutAlign="space-evenly center">
+    <div>
+      <img src="assets/nav-icon.png">
+    </div>
+    <div fxLayout="row" fxLayoutGap="1vw">
+      <div *ngFor="let cat of categories">
+        <div class="categoryButtons" fxFlex="1 1 auto" (click)="scrollTo(cat.id)">
+          {{ cat.name }}
+        </div>
       </div>
     </div>
+
   </div>
 
-
-
-  <div *ngIf="menuCtrl" class="menu-icon" fxLayoutAlign="end center">
+  <div *ngIf="isSmallScreen" class="menu-icon" fxLayoutAlign="end center">
     <button mat-button [matMenuTriggerFor]="belowMenu">
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #belowMenu="matMenu" class="small-menu" yPosition="below">
       <div *ngFor="let cat of categories">
-        <div class="category" [ngClass]="selectedButton === cat.id ? 'selectBtn' : ''" fxFlex="1 1 auto" color="primary"
-          (click)="scrollTo(cat.id)">
+        <div class="category" fxFlex="1 1 auto" color="primary" (click)="scrollTo(cat.id)">
           {{ cat.name }}
         </div>
       </div>
@@ -25,7 +27,10 @@
   </div>
 </div>
 
-<app-about-us id="whoWeAre"></app-about-us>
-<app-products id="products" [products]="products" (openProducts)="openProductsDialog($event)"></app-products>
-<app-photos-section id="photos" [photos]="photos" (openPhotos)="openPhotoGallery($event)"></app-photos-section>
+<app-home id="home"></app-home>
+<app-about-us id="aboutUs"></app-about-us>
+<app-photos-section id="photos" (openPhotos)="openPhotoGallery($event)"></app-photos-section>
 <app-contact id="contact"></app-contact>
+
+<app-communication-sticky></app-communication-sticky>
+<app-footer></app-footer>

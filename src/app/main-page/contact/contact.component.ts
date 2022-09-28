@@ -12,4 +12,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToLink(link){
+    window.open("https://www.google.com.tr/?hl=tr");
+  }
+
 }

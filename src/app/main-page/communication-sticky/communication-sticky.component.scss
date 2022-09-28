@@ -1,0 +1,33 @@
+:host {
+  position: fixed;
+  flex-direction: column;
+  right: 0%;
+  top: 40%;
+  padding: 14px 0px;
+  background-color: #faca52
+}
+
+.container{
+  flex-direction: column;
+  display: flex;
+  img{
+    margin-bottom: 14px;
+    background-color:#faca52
+  }
+  mat-icon{
+    margin-bottom: 10px;
+  }
+
+  img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    -webkit-transform:rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transition: 1s;
+  }
+}
+
+

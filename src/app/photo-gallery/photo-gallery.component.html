@@ -1,28 +1,26 @@
-<!-- <div
-  fxFlex="0 1 auto"
-  fxLayout="row"
-  fxLayoutAlign="space-between center"
-  style="margin-bottom: 6px"
->
-  <div align="center">{{ imageId + "/" + photos.length }}</div>
-  <mat-icon (click)="close()" style="cursor: pointer"> close </mat-icon>
-</div> -->
-
-<div fxLayout="row" align="center" style="margin-bottom: 16px">
+<div class="m-b-16" fxLayout="row" align="center">
   <div fxFlex="0 1 100%" style="font-size: large">
     {{ imageId+1 + "/" + photos.length }}
   </div>
-  <div fxFlex="2%">
-    <mat-icon (click)="close()" style="cursor: pointer"> close </mat-icon>
+  <div class="m-r-1" fxFlex="4%">
+    <mat-icon class="close" (click)="close()"> close </mat-icon>
   </div>
 </div>
 
-<div fxFlex="1 1 auto" fxLayout="row" style="padding-bottom: 4vh">
-  <div class="arrow" (click)="changeImg('decrease')"><</div>
-
-  <div fxFlex="1 1 90%" fxLayoutAlign="center center">
-    <img [src]="photos[imageId].url" style="width: 90%; height: 100%" />
+<div class="p-b-4" fxFlex="1 1 auto" fxLayout="row">
+  <div class="arrow" id="decrease">
+    <button mat-fab color="primary" (click)="changeImg('decrease')">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
   </div>
 
-  <div class="arrow" id="increase" (click)="changeImg('increase')">></div>
+  <div fxFlex="1 1 90%" fxLayoutAlign="center center">
+    <img class="image" [src]="photos[imageId].url" />
+  </div>
+
+  <div class="arrow" id="increase">
+    <button mat-fab color="primary" (click)="changeImg('increase')">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
 </div>
