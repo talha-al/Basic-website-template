@@ -56,7 +56,7 @@
 
       <div class="skills-cell">
         <div class="skills_text">Angular</div>
-        <ngb-progressbar fxFlex="60%" type="success" [value]="100" [striped]="true"></ngb-progressbar>
+        <ngb-progressbar type="success" [value]="100" [striped]="true"></ngb-progressbar>
       </div>
 
       <div class="skills-cell">
@@ -87,9 +87,12 @@
 
     <div class="info-section">
       <div class="title">INTEREST</div>
-      <li>Swimming</li>
-      <li>Riding</li>
-      <li>Reading a book</li>
+      <div class="skills_text" fxLayoutGap="1vh" fxLayout="column">
+        <span> Swimming, </span>
+        <span> Riding, </span>
+        <span> Reading book </span>
+
+      </div>
     </div>
   </div>
 </div>

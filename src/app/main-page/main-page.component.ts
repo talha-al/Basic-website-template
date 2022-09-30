@@ -15,7 +15,7 @@ export class MainPageComponent implements OnInit {
   logo: string = './assets/logo.png';
   categories = [
     { name: 'Home', id: 'home' },
-    { name: 'About Us', id: 'aboutUs' },
+    { name: 'About Me', id: 'aboutUs' },
     { name: 'Photos', id: 'photos' },
     { name: 'Contact', id: 'contact' },
   ];

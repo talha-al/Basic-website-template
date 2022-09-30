@@ -60,6 +60,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     FormsModule,
     MatGridListModule
   ],
+  exports:[MainPageComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

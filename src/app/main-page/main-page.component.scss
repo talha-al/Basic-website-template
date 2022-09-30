@@ -8,7 +8,7 @@
 
 .sticky {
   background-color: rgb(78, 77, 77) !important;
-  transition: 1s
+  transition: 1s;
 }
 
 .menu {
@@ -21,7 +21,7 @@
   height: 7vh;
   font-size: 16px;
   font-weight: bold;
-  transition: 1s
+  transition: 1s;
 }
 
 .categoryButtons {
@@ -32,8 +32,8 @@
 
   &:hover,
   &:focus {
-    color: #ffa260;
-    box-shadow: 0 0.5em 0.5em -0.4em white;
+    color: #faca52;
+    box-shadow: 0 0.7em 0.5em -0.4em #faca52;
     transform: translateY(-0.25em);
   }
 }
