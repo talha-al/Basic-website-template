@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LinkConstants } from 'src/app/links';
 
 @Component({
   selector: 'app-contact',
@@ -7,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  linkInstagram = LinkConstants.linkInstagram;
+  linkFaceBook = LinkConstants.linkFaceBook;
+  linkLinkedin = LinkConstants.linkLinkedin;
+  linkTwitter = LinkConstants.linkTwitter;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  goToLink(link){
-    window.open("https://www.google.com.tr/?hl=tr");
+  goToLink(link) {
+    window.open(link);
   }
 
 }

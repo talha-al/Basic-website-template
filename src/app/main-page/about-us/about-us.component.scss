@@ -91,6 +91,9 @@
   margin-top: 0.2em;
   letter-spacing: 0.07em;
   overflow-wrap: break-word;
+  span{
+    overflow-wrap: normal !important;
+  }
 }
 
 ngb-progressbar {

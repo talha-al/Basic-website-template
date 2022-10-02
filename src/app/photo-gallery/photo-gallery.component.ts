@@ -7,12 +7,8 @@ import { Component, Inject, OnInit } from '@angular/core';
   styleUrls: ['./photo-gallery.component.scss'],
 })
 export class PhotoGalleryComponent implements OnInit {
-  photos = [
-    { id: 0, url: './assets/product1.jpg' },
-    { id: 1, url: './assets/product2.jpg' },
-    { id: 2, url: './assets/product3.jpg' },
-    { id: 3, url: './assets/product1.jpg' },
-  ];
+  photos = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
+
   imageId: number;
 
   constructor(
@@ -23,8 +19,6 @@ export class PhotoGalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.data);
-    console.log(this.photos[0].url);
   }
 
   changeImg(param: string) {

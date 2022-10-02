@@ -19,21 +19,42 @@ ngb-carousel {
   flex: 0 0 calc((100%/3) - 12px);
   margin: 4px;
   cursor: pointer;
+  // animation: move 1.5s ease-out ;
+  animation: grow 1.5s ease-out ;
+
   img {
     width: 100%;
   }
 }
+@keyframes grow {
+  0% {
+   transform: scale(0.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+// @keyframes move {
+//   0% {
+//     right: -1000px;
+//   }
+//   100% {
+//     right: 0%;
+//   }
+// }
 .photo-cell:hover {
   overflow: hidden;
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+
   img {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
     transition: 0.5s ease-in-out;
     opacity: 0.8;
+
   }
 }
 
